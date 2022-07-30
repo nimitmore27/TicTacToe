@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--fontnborder);
+    user-select: none;
+}
+
+:root {
+    /* --lightbg: #531ebb; */
+    --lightbg: #3c496a;
+
+    /* --darkbg: #4c18a8; */
+    --darkbg: #222a41;
+
+    /* --fontnborder: #ffd753; */
+    --fontnborder: #ffcba4;
+
+    /* --cross: #f44c8b; */
+    --cross: #e25041;
+
+    /* --zero: #02f5ff; */
+    --zero: #1bbc9b;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+
+#p1, #p2 {
+    width: 30%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+label {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 2rem;
+}
+
+input {
+    display: block;
+    width: 15vw;
+    height: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px auto;
+    border: 2px solid var(--fontnborder);
+    border-radius: 10px;
+    background-color: var(--darkbg);
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+#title h1 {
+    margin-top: 10px;
+}
+
+#playbtn {
+    position: relative;
+    bottom: 15%;
+}
+
+body {
+    background-color: var(--lightbg);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+#lock {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--darkbg);
+    opacity: 0.5;
+    font-size: 5rem;
+    user-select: none;
+}
+
+.row {
+    display: inline-flex;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    aspect-ratio: 1/1;
+    border: 2px dotted var(--fontnborder);
+    background-color: var(--darkbg);
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+}
+
+#btndiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns {
+    padding: 1rem 2rem;
+    background-color: var(--darkbg);
+    border: 2px solid var(--fontnborder);
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.btns:hover {
+    background-color: var(--fontnborder);
+    color: var(--darkbg);
+}
+
+#btndiv button {
+    margin-top: 10px;
+}
+
+.fa-x {
+    color: var(--cross);
+}
+
+.fa-o {
+    color: var(--zero);
+}
+
+@media (max-width:768px) {
+    * {
+        font-size: 0.5em;
+    }
+
+    #lock {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f462297f0f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="p1">
+            <label for="player1">Player 1</label>
+            <input type="text" id="player1" placeholder="Player1">
+        </div>
+        <div id="title">
+            <h1 id="announce"></h1>
+            <button id="playbtn" class="btns" onclick="start()">Play</button>
+        </div>
+        <div id="p2">
+            <label for="player2">Player 2</label>
+            <input type="text" id="player2" placeholder="Player2">
+        </div>
+    </header>
+    <div class="container">
+        <div id="lock">
+            <i class="fa-solid fa-lock"></i>Click On Play To Start
+        </div>
+        <div class="row">
+            <div onclick="move(0)" class="r1 c1 box d1"></div>
+            <div onclick="move(1)" class="r1 c2 box"></div>
+            <div onclick="move(2)" class="r1 c3 box d2"></div>
+        </div>
+        <div class="row">
+            <div onclick="move(3)" class="r2 c1 box"></div>
+            <div onclick="move(4)" class="r2 c2 box d1 d2"></div>
+            <div onclick="move(5)" class="r2 c3 box"></div>
+        </div>
+        <div class="row">
+            <div onclick="move(6)" class="r3 c1 box d2"></div>
+            <div onclick="move(7)" class="r3 c2 box"></div>
+            <div onclick="move(8)" class="r3 c3 box d1"></div>
+        </div>
+        <div id="btndiv">
+            <button class="btns" onclick="GameReset(0)">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
