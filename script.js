@@ -11,8 +11,6 @@ let announce = document.getElementById('announce');
 let p1inp = document.getElementById('player1');
 let p2inp = document.getElementById('player2');
 
-let playbtn = document.getElementById("playbtn");
-
 let cross = '<i class="fa-solid fa-x"></i>';
 let zero = '<i class="fa-solid fa-o"></i>';
 
@@ -26,7 +24,7 @@ function start() {
     player1 = p1inp.value == '' ? 'Player 1' : p1inp.value;
     player2 = p2inp.value == '' ? 'Player 2' : p2inp.value;
     announce.innerHTML = `${player1}'s Turn`;
-    playbtn.style.display = 'none';
+    document.getElementById("playbtn").style.display = 'none';
     GameReset(1);
 }
 function move(pos) {
@@ -53,9 +51,9 @@ function move(pos) {
 }
 function check() {
     for (let i = 0; i < 3; i++) {
-        if (board[i][0].innerHTML == board[i][1].innerHTML && board[i][1].innerHTML == board[i][2].innerHTML)
+        if (board[i][0].innerHTML == board[i][1].innerHTML && board[i][1].innerHTML == board[i][2].innerHTML && board[i][0].innerHTML != '' && board[i][1].innerHTML != '' &&board[i][2].innerHTML != '')
             return board[i][0].innerHTML;
-        else if (board[0][i].innerHTML == board[1][i].innerHTML && board[1][i].innerHTML == board[2][i].innerHTML)
+        if (board[0][i].innerHTML == board[1][i].innerHTML && board[1][i].innerHTML == board[2][i].innerHTML && board[0][i].innerHTML != '' && board[1][i].innerHTML != '' &&board[2][i].innerHTML != '')
             return board[0][i].innerHTML;
     }
     if ((board[0][0].innerHTML == board[1][1].innerHTML && board[1][1].innerHTML == board[2][2].innerHTML) || (board[0][2].innerHTML == board[1][1].innerHTML && board[1][1].innerHTML == board[2][0].innerHTML))
@@ -70,7 +68,7 @@ function GameReset(rs) {
     }
     p1inp.readOnly = false, p2inp.readOnly = false;
     p1inp.value = '', p2inp.value = '';
-    playbtn.style.display = 'block';
+    document.getElementById("playbtn").style.display = 'block';
     lock.style.display = 'Flex';
     turn = 1;
 }
