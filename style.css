@@ -40,12 +40,12 @@ label {
     display: block;
     width: fit-content;
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 input {
     display: block;
-    width: 15vw;
+    width: 25vw;
     height: 2rem;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -67,7 +67,9 @@ input {
 }
 
 #title h1 {
+    text-align: center;
     margin-top: 10px;
+    font-size: 1.8rem;
 }
 
 #playbtn {
